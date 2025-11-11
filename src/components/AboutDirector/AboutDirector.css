@@ -1,0 +1,71 @@
+/* AboutDirector.css */
+
+.about-director-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-director-section h2 {
+  color: #006400; /* deep green */
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  user-select: none;
+}
+
+.director-grid {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.director-image {
+  flex: 1 1 300px;
+  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 100, 0, 0.2);
+  object-fit: cover;
+  height: 380px;
+}
+
+.director-info {
+  flex: 1 1 500px;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  min-width: 280px;
+}
+
+.director-info p {
+  margin-bottom: 1.25rem;
+}
+
+.director-info strong {
+  color: #FFD700; /* gold */
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .director-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .director-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .director-info {
+    min-width: 100%;
+    text-align: center;
+  }
+}

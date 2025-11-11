@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* Left side - firm info */}
         <div className="footer-about">
-          <h3>K. Groener Attorneys</h3>
+          <h3>Kuvasha Groener Attorneys</h3>
           <p>
             Providing trusted and professional legal services with integrity and care.
           </p>
@@ -16,8 +16,8 @@ const Footer = () => {
         {/* Middle - contact info */}
         <div className="footer-contact">
           <h4>Contact Us</h4>
-          <p>📍 47 Beach Road, Strand, Western Cape, South Africa</p>
-          <p>📞 021 823 9471</p>
+          <p>📍 47 Saayman Road, Honeydew 2040, Johannesburg, South Africa</p>
+          <p>📞 066 223 2041</p>
           <p>📧 info@kgroenerattorneys.co.za</p>
         </div>
 
@@ -36,7 +36,7 @@ const Footer = () => {
 
       {/* Bottom line */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} K. Groener Attorneys. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} Kuvasha Groener Attorneys. All Rights Reserved.</p>
       </div>
     </footer>
   );

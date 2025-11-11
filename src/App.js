@@ -10,6 +10,7 @@ import Services from "./components/Services/Services";
 // Add Team and Contact components later
 import Team from "./components/Team/Team";
 import Contact from "./components/Contact/Contact";
+import AboutDirector from "./components/AboutDirector/AboutDirector";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about-director" element={<AboutDirector />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

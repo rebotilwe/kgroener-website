@@ -1,48 +1,56 @@
 /* Footer.css */
 
 .footer {
-  background-color: #222;
-  color: #ccc;
-  font-family: 'Georgia', serif;
-  padding: 3rem 1.5rem 1.5rem;
-  border-top: 4px solid #ffcc00; /* accent color */
+  background-color: #006400; /* deep green */
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .footer-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
 .footer-about,
 .footer-contact,
 .footer-links {
-  flex: 1 1 250px;
-  min-width: 220px;
+  flex: 1 1 280px;
+  min-width: 280px;
 }
 
-.footer-about h3,
+.footer-about h3 {
+  color: #FFD700; /* gold */
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+.footer-about p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f0f0f0;
+}
+
 .footer-contact h4,
 .footer-links h4 {
-  color: #ffcc00; /* warm gold accent */
-  margin-bottom: 1rem;
+  color: #FFD700;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
   font-weight: 700;
-  font-size: 1.4rem;
-}
-
-.footer-about p,
-.footer-contact p,
-.footer-links ul li a {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #ccc;
+  user-select: none;
 }
 
 .footer-contact p {
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  margin: 6px 0;
+  color: #f9f9f9;
 }
 
 .footer-links ul {
@@ -52,40 +60,41 @@
 }
 
 .footer-links ul li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 10px;
 }
 
 .footer-links ul li a {
+  color: #fff;
   text-decoration: none;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .footer-links ul li a:hover,
 .footer-links ul li a:focus {
-  color: #ffcc00;
+  color: #FFD700;
   outline: none;
-  text-decoration: underline;
 }
 
 .footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #2a5d22;
+  padding-top: 15px;
   text-align: center;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #444;
-  font-size: 0.85rem;
-  color: #888;
+  font-size: 0.9rem;
+  color: #cfcfcf;
+  user-select: none;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 30px;
   }
   .footer-about,
   .footer-contact,
   .footer-links {
-    flex: 1 1 100%;
-    min-width: auto;
+    min-width: 100%;
   }
 }
