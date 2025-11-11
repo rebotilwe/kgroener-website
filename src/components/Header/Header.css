@@ -1,0 +1,65 @@
+/* Header.css */
+.header {
+  background-color: #1a1a1a; /* Dark, solid background for professionalism */
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Georgia', serif;
+  color: #f5f5f5;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+  cursor: default;
+  user-select: none;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav ul li a {
+  color: #f5f5f5;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.header nav ul li a:hover,
+.header nav ul li a:focus {
+  color: #ffcc00; /* Accent color - warm gold/yellow */
+  border-bottom: 2px solid #ffcc00;
+  outline: none;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

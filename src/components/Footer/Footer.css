@@ -1,0 +1,91 @@
+/* Footer.css */
+
+.footer {
+  background-color: #222;
+  color: #ccc;
+  font-family: 'Georgia', serif;
+  padding: 3rem 1.5rem 1.5rem;
+  border-top: 4px solid #ffcc00; /* accent color */
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-about,
+.footer-contact,
+.footer-links {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer-about h3,
+.footer-contact h4,
+.footer-links h4 {
+  color: #ffcc00; /* warm gold accent */
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.footer-about p,
+.footer-contact p,
+.footer-links ul li a {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.footer-contact p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover,
+.footer-links ul li a:focus {
+  color: #ffcc00;
+  outline: none;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer-about,
+  .footer-contact,
+  .footer-links {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+}
