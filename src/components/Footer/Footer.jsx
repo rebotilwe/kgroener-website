@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Middle - contact info */}
         <div className="footer-contact">
           <h4>Contact Us</h4>
-          <p>📍 47 Saayman Road, Honeydew 2040, Johannesburg, South Africa</p>
+          <p>📍 Falcon Glen, 47 Saayman Road, Honeydew 2040, Johannesburg, South Africa</p>
           <p>📞 066 223 2041</p>
           <p>📧 info@kgroenerattorneys.co.za</p>
         </div>

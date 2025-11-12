@@ -61,12 +61,13 @@ const Contact = () => {
 
           <div className="contact-info">
             <h3>Our Contact Information</h3>
-            <p>📍 47 Saayman Road, Honeydew 2040, Johannesburg, South Africa</p>
+            <p>📍 Falcon Glen, 47 Saayman Road, Honeydew 2040, Johannesburg, South Africa</p>
             <p>📞 +27 66 223 2041</p>
             <p>📧 info@kgroenerattorneys.co.za</p>
             <h4>Office Hours</h4>
             <p>Monday – Friday: 08:00 – 17:00</p>
           </div>
+
         </div>
 
         <div className="contact-map">
