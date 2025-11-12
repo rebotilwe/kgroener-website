@@ -1,0 +1,56 @@
+.cta-section {
+  background-color: #006400; /* deep green */
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 60px auto 60px; /* added 60px bottom margin */
+  max-width: 1100px;
+  box-shadow: 0 6px 18px rgba(0, 100, 0, 0.2);
+}
+
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  color: #FFD700; /* gold */
+}
+
+.cta-button {
+  background-color: #FFD700; /* gold */
+  color: #006400;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 15px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .cta-section p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
