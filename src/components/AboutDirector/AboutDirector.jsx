@@ -36,11 +36,11 @@ const AboutDirector = () => {
               the attention and care they deserve.
             </p>
 
-            <p>
+            {/* <p>
               When not in court or advising clients, Kuvasha is an advocate for
               mentorship and women empowerment in the legal industry — inspiring
               young professionals to pursue excellence in their fields.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

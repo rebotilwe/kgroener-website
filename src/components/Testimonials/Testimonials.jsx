@@ -3,24 +3,43 @@ import "./Testimonials.css";
 
 const testimonialsData = [
   {
-    quote: "Excellent legal services with professional guidance!",
-    name: "John Doe",
-    role: "Business Owner",
+    quote:
+      "I have never come across a more compassionate and focused firm. Kuvasha really makes the effort when providing a service – she doesn’t take on a matter just for the income but shows passion in her work and turnaround time.",
+    name: "Karen Kannigadu",
   },
   {
-    quote: "Kuvasha Groener Attorneys helped me with my property transfer seamlessly.",
-    name: "Jane Smith",
-    role: "Property Client",
+    quote:
+      "I was surprised with the speedy response I received from Kuvasha Groener Attorneys. The professional advice and services rendered were impeccable. Thank you for making my issue an easy and simple one to resolve.",
+    name: "Elton Moodley",
   },
   {
-    quote: "Professional and reliable! Highly recommended.",
-    name: "Michael Johnson",
-    role: "Entrepreneur",
+    quote:
+      "I recently had the privilege of working with Kuvasha Groener Attorneys, and I cannot recommend her highly enough. Her professionalism and dedication were remarkable. She went above and beyond what I expected.",
+    name: "Sharlini Lingiah",
   },
   {
-    quote: "They handled my contract agreements perfectly.",
-    name: "Sarah Lee",
-    role: "Corporate Client",
+    quote:
+      "Thank you Kuvasha for the professional and efficient service provided with the property transfer process. Your speedy and friendly service is sterling, and we wish you every success.",
+    name: "Sabashnee Nadasen",
+  },
+  {
+    quote:
+      "Thanks for your excellent service Kuvasha. You dealt with the transfer of our property with so much compassion and kept us updated every step of the way. Sincerely appreciated.",
+    name: "Lynette van Vuuren",
+  },
+  {
+    quote:
+      "I received very professional and prompt service from Kuvasha who is extremely friendly and knowledgeable. Dedicated to assisting her clients and finding solutions for any legal needs.",
+    name: "Pheladi Mantloana",
+  },
+  {
+    quote:
+      "Professional and efficient services provided by the attorney in respect of a contractual dispute.",
+    name: "Karunesh Pillay",
+  },
+  {
+    quote: "Extremely professional and knowledgeable.",
+    name: "Nomsa Skosana",
   },
 ];
 
@@ -46,8 +65,7 @@ const Testimonials = () => {
 
         <div className="testimonial-card">
           <p className="quote">"{testimonialsData[current].quote}"</p>
-          <p className="client-name">{testimonialsData[current].name}</p>
-          <p className="client-role">{testimonialsData[current].role}</p>
+          <p className="client-name">— {testimonialsData[current].name}</p>
         </div>
 
         <button className="arrow right" onClick={nextSlide}>
