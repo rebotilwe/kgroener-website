@@ -12,15 +12,15 @@ const Header = () => {
   return (
     <header className={`header ${menuOpen ? "menu-active" : ""}`}>
       <div className="container">
-        {/* Logo Section */}
-        <div className="logo-section">
+        {/* ✅ Logo Section (clickable scroll to hero) */}
+        <a href="/#hero" className="logo-section" onClick={handleLinkClick}>
           <img
             src={logo}
             alt="Kuvasha Groener Attorneys Logo"
             className="logo-img"
           />
           <h1 className="logo-text">Kuvasha Groener Attorneys</h1>
-        </div>
+        </a>
 
         {/* Navigation */}
         <nav className={menuOpen ? "open" : ""}>

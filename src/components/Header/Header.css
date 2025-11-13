@@ -24,7 +24,17 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none; /* removes underline */
+  color: inherit; /* keeps your gold color */
 }
+
+.logo-section:visited,
+.logo-section:hover,
+.logo-section:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .logo-img {
   height: 45px;
@@ -141,4 +151,7 @@ nav ul.nav-links li a:hover::after {
   .logo-text {
     font-size: 1.1rem;
   }
+}
+html {
+  scroll-behavior: smooth;
 }
