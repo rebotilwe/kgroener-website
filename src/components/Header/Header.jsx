@@ -2,20 +2,24 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
+import logo from '../../assets/images/logo.png'
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-
-  // Close menu when clicking a link
   const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <header className="header">
       <div className="container">
-        <h1>Kuvasha Groener Attorneys</h1>
+        {/* Logo Section */}
+        <div className="logo-section">
+          <img src={logo} alt="Kuvasha Groener Attorneys Logo" className="logo-img" />
+          <h1 className="logo-text">Kuvasha Groener Attorneys</h1>
+        </div>
 
-        {/* Hamburger for mobile */}
+        {/* Hamburger Menu */}
         <div
           className={`hamburger ${menuOpen ? "active" : ""}`}
           onClick={toggleMenu}
@@ -25,6 +29,7 @@ const Header = () => {
           <span></span>
         </div>
 
+        {/* Navigation */}
         <nav className={menuOpen ? "open" : ""}>
           <ul className="nav-links">
             <li>

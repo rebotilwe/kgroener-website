@@ -1,65 +1,87 @@
-/* Header.css */
-
-/* Header Container */
 .header {
-  background-color: #006400; /* deep green */
+  background: linear-gradient(90deg, #004b23, #006400);
   color: #fff;
-  padding: 15px 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 18px 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Flex container for logo and nav */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* Moves left and right apart */
+  justify-content: space-between;
   align-items: center;
 }
 
-/* Logo */
-.header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #FFD700; /* gold */
-  user-select: none;
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-/* Navigation Links */
+.logo-img {
+  height: 45px;
+  width: auto;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFD700; /* gold */
+}
+
+/* Navigation */
 nav ul.nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
 
 nav ul.nav-links li a {
+  position: relative;
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 6px 0;
+  transition: color 0.3s ease;
 }
 
-nav ul.nav-links li a:hover,
-nav ul.nav-links li a:focus {
-  background-color: #FFD700; /* gold background on hover */
-  color: #006400; /* green text on hover */
-  outline: none;
+nav ul.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #FFD700;
+  transition: width 0.3s ease;
 }
 
-/* Hamburger Menu Button */
+nav ul.nav-links li a:hover::after {
+  width: 100%;
+}
+
+nav ul.nav-links li a:hover {
+  color: #FFD700;
+}
+
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 25px;
+  width: 26px;
   height: 20px;
   cursor: pointer;
 }
@@ -68,45 +90,36 @@ nav ul.nav-links li a:focus {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: #FFD700; /* gold */
+  background-color: #FFD700;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-/* Transform Hamburger to X when active */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive Styles for Mobile */
+/* Mobile */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   nav {
     position: absolute;
     top: 65px;
     left: 0;
     width: 100%;
-    background-color: #006400;
+    background-color: #004b23;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
 
   nav.open {
-    max-height: 300px; /* enough to show all links */
+    max-height: 300px;
   }
 
   nav ul.nav-links {
@@ -118,7 +131,7 @@ nav ul.nav-links li a:focus {
     display: block;
     padding: 12px 0;
     text-align: center;
-    border-bottom: 1px solid #ffffff33;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .hamburger {
