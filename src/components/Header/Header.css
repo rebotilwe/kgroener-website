@@ -1,7 +1,8 @@
+/* --- Header Base --- */
 .header {
   background: linear-gradient(90deg, #004b23, #006400);
   color: #fff;
-  padding: 18px 25px;
+  padding: 15px 25px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
@@ -13,10 +14,12 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* adds space between logo and hamburger */
 }
 
+/* --- Logo --- */
 .logo-section {
   display: flex;
   align-items: center;
@@ -25,7 +28,6 @@
 
 .logo-img {
   height: 45px;
-  width: auto;
   border-radius: 50%;
   background-color: #fff;
   padding: 5px;
@@ -35,26 +37,26 @@
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #FFD700; /* gold */
+  color: #FFD700;
 }
 
-/* Navigation */
+/* --- Navigation --- */
 nav ul.nav-links {
   list-style: none;
   display: flex;
   gap: 30px;
-  margin: 0;
-  padding: 0;
 }
 
 nav ul.nav-links li a {
-  position: relative;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  letter-spacing: 0.5px;
-  padding: 6px 0;
-  transition: color 0.3s ease;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav ul.nav-links li a:hover {
+  color: #FFD700;
 }
 
 nav ul.nav-links li a::after {
@@ -72,27 +74,26 @@ nav ul.nav-links li a:hover::after {
   width: 100%;
 }
 
-nav ul.nav-links li a:hover {
-  color: #FFD700;
-}
-
-/* Hamburger */
+/* --- Hamburger --- */
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 26px;
-  height: 20px;
+  width: 30px;
+  height: 22px;
   cursor: pointer;
+  margin-left: auto; /* pushes it right */
+  background: #006400;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 .hamburger span {
-  display: block;
   height: 3px;
   width: 100%;
   background-color: #FFD700;
   border-radius: 2px;
-  transition: all 0.3s ease;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -105,7 +106,7 @@ nav ul.nav-links li a:hover {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile */
+/* --- Responsive --- */
 @media (max-width: 768px) {
   nav {
     position: absolute;
@@ -113,9 +114,9 @@ nav ul.nav-links li a:hover {
     left: 0;
     width: 100%;
     background-color: #004b23;
-    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    max-height: 0;
+    transition: max-height 0.4s ease;
   }
 
   nav.open {
@@ -125,16 +126,19 @@ nav ul.nav-links li a:hover {
   nav ul.nav-links {
     flex-direction: column;
     gap: 0;
+    text-align: center;
   }
 
   nav ul.nav-links li a {
     display: block;
     padding: 12px 0;
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .hamburger {
     display: flex;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
   }
 }
