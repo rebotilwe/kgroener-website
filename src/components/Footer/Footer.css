@@ -1,84 +1,84 @@
+/* Remove all default spacing inside the footer */
+.footer * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .footer {
-  background-color: #006400; /* deep green */
+  background-color: #006400;
   color: #fff;
-  padding: 20px 15px 15px; /* slightly more compact */
+  padding: 20px 10px 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.25);
 }
 
+/* --- Layout --- */
 .footer-container {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: 15px; /* reduced gap for tighter alignment */
   flex-wrap: wrap;
-  align-items: center; /* vertically center all columns */
+  align-items: flex-start;
+  gap: 1px; /* no space between flex children */
 }
 
+/* --- Column styles --- */
 .footer-about,
 .footer-contact,
 .footer-links {
   flex: 1 1 260px;
   min-width: 260px;
+  text-align: center;
+  padding: 5px 10px; /* Reduced padding */
 }
 
-/* Left column */
+/* --- About Section --- */
 .footer-about h3 {
-  color: #FFD700; /* gold */
+  color: #FFD700;
   font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .footer-about p {
   font-size: 0.9rem;
-  line-height: 1.4;
   color: #f0f0f0;
+  line-height: 1.3; /* Reduced line height */
 }
 
-/* Center column - contact info */
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertically center */
-  align-items: center;     /* horizontally center */
-  text-align: center;      /* center text */
-  padding: 0 5px;          /* small padding for balance */
-}
-
+/* --- Contact Section --- */
 .footer-contact h4 {
   color: #FFD700;
   font-size: 1rem;
-  margin-bottom: 4px; /* slightly reduced */
   font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .footer-contact p {
   font-size: 0.88rem;
-  margin: 2px 0; /* tighter spacing */
   color: #f9f9f9;
+  line-height: 1.3; /* Reduced line height */
 }
 
-/* Right column */
+/* --- Links Section --- */
 .footer-links h4 {
   color: #FFD700;
   font-size: 1rem;
-  margin-bottom: 6px;
   font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .footer-links ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.footer-links ul li {
-  margin-bottom: 5px;
+.footer-links li {
+  margin: 2px 0; /* Reduced margin */
 }
 
-.footer-links ul li a {
+.footer-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -86,33 +86,85 @@
   transition: color 0.3s ease;
 }
 
-.footer-links ul li a:hover {
+.footer-links a:hover {
   color: #FFD700;
 }
 
-/* Bottom line */
+/* --- Footer Bottom --- */
 .footer-bottom {
-  margin-top: 12px;
+  margin-top: 10px;
   border-top: 1px solid #2a5d22;
-  padding-top: 8px;
+  padding-top: 6px;
   text-align: center;
   font-size: 0.8rem;
   color: #cfcfcf;
 }
 
-/* Responsive adjustments */
+/* --- Responsive --- */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
-    gap: 10px;
-    text-align: center;
     align-items: center;
+    gap: 0; /* Ensure no gap */
   }
 
   .footer-about,
   .footer-contact,
   .footer-links {
-    min-width: 100%;
-    padding: 0; /* remove side padding for mobile */
+    flex: none; /* Remove flex growth on mobile */
+    width: 100%;
+    padding: 8px 10px; /* Reduced padding for mobile */
+    margin: 0; /* Remove any margin */
+  }
+
+  /* Minimal spacing between sections */
+  .footer-about + .footer-contact,
+  .footer-contact + .footer-links {
+    margin-top: 8px; /* Reduced from your original */
+  }
+
+  /* Reduce line heights further on mobile */
+  .footer-about p,
+  .footer-contact p {
+    line-height: 1.2;
+  }
+
+  .footer-links li {
+    margin: 1px 0; /* Even smaller on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px 5px 5px; /* Reduced overall footer padding */
+  }
+
+  .footer-about,
+  .footer-contact,
+  .footer-links {
+    padding: 5px 5px; /* Minimal padding */
+  }
+
+  .footer-about + .footer-contact,
+  .footer-contact + .footer-links {
+    margin-top: 5px; /* Minimal gap */
+  }
+
+  /* Compact text sizes for very small screens */
+  .footer-about h3 {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+  }
+
+  .footer-about p,
+  .footer-contact p,
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .footer-contact h4,
+  .footer-links h4 {
+    font-size: 0.95rem;
+    margin-bottom: 3px;
   }
 }
