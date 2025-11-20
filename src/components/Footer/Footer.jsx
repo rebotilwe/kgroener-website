@@ -35,9 +35,13 @@ const Footer = () => {
       </div>
 
       {/* Bottom line */}
-      <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Kuvasha Groener Attorneys. All Rights Reserved.</p>
-      </div>
+     <div className="footer-bottom">
+  <p>
+    © {new Date().getFullYear()} Kuvasha Groener Attorneys. All Rights Reserved. 
+    &nbsp;|&nbsp; Developed by Afribiz Connect
+  </p>
+</div>
+
     </footer>
   );
 };
